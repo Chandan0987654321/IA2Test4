@@ -1,1 +1,110 @@
+Breakpoint 1, main () at p1final.c:31
+31      radius=input_radius();
+(gdb) s
+input_radius () at p1final.c:3
+3   float input_radius(){
+(gdb) n
+5       printf("Enter the radius of stomach of the camel\n");
+(gdb) n
+Enter the radius of stomach of the camel
+6       scanf("%f",&n);
+(gdb) n
+^[[D
+7       return n;
+(gdb) b main
+Note: breakpoint 1 also set at pc 0x55d77f80097c.
+Breakpoint 2 at 0x55d77f80097c: file p1final.c, line 31.
+(gdb) r
+The program being debugged has been started already.
+Start it from the beginning? (y or n) y
+Starting program: /home/runner/IA2Test4/a.out 
+warning: Error disabling address space randomization: Operation not permitted
 
+Breakpoint 1, main () at p1final.c:31
+31      radius=input_radius();
+(gdb) s
+input_radius () at p1final.c:3
+3   float input_radius(){
+(gdb) s
+5       printf("Enter the radius of stomach of the camel\n");
+(gdb) n
+Enter the radius of stomach of the camel
+6       scanf("%f",&n);
+(gdb) n
+5
+7       return n;
+(gdb) n
+8   }
+(gdb) n
+main () at p1final.c:32
+32      height=input_height();
+(gdb) s
+input_height () at p1final.c:9
+9   float input_height(){
+(gdb) n
+11      printf("Enter the height of the camel\n");
+(gdb) n
+Enter the height of the camel
+12      scanf("%f",&n);
+(gdb) n
+7
+13      return n;
+(gdb) n
+14  }
+(gdb) n
+main () at p1final.c:33
+33      length=input_length();
+(gdb) s
+input_length () at p1final.c:15
+15  float input_length(){
+(gdb) n
+17      printf("Enter the length of the camel\n");
+(gdb) n
+Enter the length of the camel
+18      scanf("%f",&n);
+(gdb) n
+8
+19      return n;
+(gdb) n
+20  }
+(gdb) n
+main () at p1final.c:34
+34      weight=find_weight(radius,height,length);
+(gdb) s
+find_weight (radius=5, height=7, length=8) at p1final.c:23
+23      weight=3.14 * (radius*radius*radius) * sqrt(height * length);
+(gdb) n
+24      return weight;
+(gdb) n
+25  }
+(gdb) n
+main () at p1final.c:35
+35      output(radius,height,length,weight);
+(gdb) s
+output (radius=5, height=7, length=8, weight=2937.20093) at p1final.c:27
+27      printf("The weight of the camel is %.2f",weight);
+(gdb) n
+28  }
+(gdb) n
+main () at p1final.c:36
+36      return 0;
+(gdb) p radius
+$1 = 5
+(gdb) p height
+$2 = 7
+(gdb) p length
+$3 = 8
+(gdb) p weight
+$4 = 2937.20093
+(gdb) l
+31      radius=input_radius();
+32      height=input_height();
+33      length=input_length();
+34      weight=find_weight(radius,height,length);
+35      output(radius,height,length,weight);
+36      return 0;
+37
+38
+39  }
+40    
+(gdb) 
