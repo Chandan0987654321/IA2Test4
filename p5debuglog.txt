@@ -1,1 +1,117 @@
 
+Breakpoint 1, main () at p5final.c:29
+29  int main(){
+(gdb) n
+31      printf("Enter number of elements in the array\n");
+(gdb) n
+Enter number of elements in the array
+32      scanf("%d",&n);
+(gdb) n
+4
+33      int a[n];
+(gdb) n
+34      input(n,a);
+(gdb) s
+input (n=4, a=0x7ffff34dc570) at p5final.c:4
+4       for(i=0;i<n;i++){
+(gdb) n
+5           printf("Enter the %d value of the array\n",i+1);
+(gdb) n
+Enter the 1 value of the array
+6           scanf("%d",&a[i]);
+(gdb) n
+1
+4       for(i=0;i<n;i++){
+(gdb) n
+5           printf("Enter the %d value of the array\n",i+1);
+(gdb) n
+Enter the 2 value of the array
+6           scanf("%d",&a[i]);
+(gdb) n
+2
+4       for(i=0;i<n;i++){
+(gdb) n
+5           printf("Enter the %d value of the array\n",i+1);
+(gdb) n
+Enter the 3 value of the array
+6           scanf("%d",&a[i]);
+(gdb) n
+7n
+4       for(i=0;i<n;i++){
+(gdb) n
+5           printf("Enter the %d value of the array\n",i+1);
+(gdb) n
+Enter the 4 value of the array
+6           scanf("%d",&a[i]);
+(gdb) n
+4       for(i=0;i<n;i++){
+(gdb) 9
+Undefined command: "9".  Try "help".
+(gdb) n
+8   }
+(gdb) n
+main () at p5final.c:35
+35      bubble_sort(n,a);
+(gdb) s
+bubble_sort (n=4, a=0x7ffff34dc570) at p5final.c:11
+11      int counter=1;
+(gdb) n
+12      while (counter<n){
+(gdb) n
+13          for(int i=0;i<n-counter;i++){
+(gdb) n
+14              if(a[i]>a[i+1]){
+(gdb) n
+13          for(int i=0;i<n-counter;i++){
+(gdb) n
+14              if(a[i]>a[i+1]){
+(gdb) n
+13          for(int i=0;i<n-counter;i++){
+(gdb) n
+14              if(a[i]>a[i+1]){
+(gdb) n
+13          for(int i=0;i<n-counter;i++){
+(gdb) n
+20          counter++; 
+(gdb) n
+12      while (counter<n){
+(gdb) n
+13          for(int i=0;i<n-counter;i++){
+(gdb) n
+14              if(a[i]>a[i+1]){
+(gdb) n
+13          for(int i=0;i<n-counter;i++){
+(gdb) n
+14              if(a[i]>a[i+1]){
+(gdb) n
+13          for(int i=0;i<n-counter;i++){
+(gdb) n
+20          counter++; 
+(gdb) n
+12      while (counter<n){
+(gdb) n
+13          for(int i=0;i<n-counter;i++){
+(gdb) n
+14              if(a[i]>a[i+1]){
+(gdb) n
+13          for(int i=0;i<n-counter;i++){
+(gdb) n
+20          counter++; 
+(gdb) n
+12      while (counter<n){
+(gdb) n
+22  }
+(gdb) n
+main () at p5final.c:36
+36      output(n,a);
+(gdb) n
+The sorted array is
+37      return 0;
+(gdb) l
+32      scanf("%d",&n);
+33      int a[n];
+34      input(n,a);
+35      bubble_sort(n,a);
+36      output(n,a);
+37      return 0;
+38  }(gdb) 

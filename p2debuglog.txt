@@ -1,1 +1,64 @@
 
+Breakpoint 1, main () at p2final.c:25
+25  int main(){
+(gdb) n
+27      c=input();
+(gdb) s
+input () at p2final.c:8
+8   camel input(){
+(gdb) n
+10      printf("Enter the radius of the stomach of the canmel\n");
+(gdb) n
+Enter the radius of the stomach of the canmel
+11      scanf("%f",&c.radius);
+(gdb) n
+4
+12      printf("Enter the height of the camel\n");
+(gdb) n
+Enter the height of the camel
+13      scanf("%f",&c.height);
+(gdb) n
+5
+14      printf("Enter the length of the camel\n");
+(gdb) n
+Enter the length of the camel
+15      scanf("%f",&c.length);
+(gdb) n
+2
+16      return c;
+(gdb) n
+17  }
+(gdb) n
+main () at p2final.c:28
+28      find_weight(&c);
+(gdb) s
+find_weight (c=0x7ffc853d1a40) at p2final.c:19
+19      c->weight=3.14 * (c->radius * c->radius * c->radius) * sqrt(c->height * c->length);
+(gdb) n
+20      printf("%.2f\n",c->weight);
+(gdb) n
+635.49
+21  }
+(gdb) n
+main () at p2final.c:29
+29      printf("%.2f %.2f %.2f %.2f\n",c.height,c.length,c.radius,c.weight);
+(gdb) n
+5.00 2.00 4.00 635.49
+30      output(c);
+(gdb) s
+output (c=...) at p2final.c:23
+23      printf("The weight of the camel is %.2f",c.weight);
+(gdb) n
+24  }
+(gdb) n
+main () at p2final.c:31
+31      return 0;
+(gdb) l
+26      camel c; 
+27      c=input();
+28      find_weight(&c);
+29      printf("%.2f %.2f %.2f %.2f\n",c.height,c.length,c.radius,c.weight);
+30      output(c);
+31      return 0;
+32  }
+(gdb) 
